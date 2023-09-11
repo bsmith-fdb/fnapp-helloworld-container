@@ -1,0 +1,11 @@
+az acr task delete --registry devonbaseacr --name mytestingtask
+
+
+
+
+
+az acr task run --registry devonbaseacr --name mytestingtask
+
+
+
+az acr task create --registry devonbaseacr --name mytestingtask --image "onbase:latest" --context https://github.com/bsmith-fdb/fnapp-helloworld-container.git --file FunctionApp1/Dockerfile --base-image-trigger-enabled false --commit-trigger-enabled false --pull-request-trigger-enabled false
